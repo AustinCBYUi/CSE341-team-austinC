@@ -13,10 +13,11 @@ const validateBook = (req, res, next) => {
         isbn: "required|string",
         stock: "required|integer"
     };
-    let test = console.log(req.body, "hi");
+    //Commented out Test code.
+    // let test = console.log(req.body, "hi");
     let isbnCheck = isbnValidator(req.body.isbn);
-    console.log(isbnCheck);
-    console.log(test)
+    // console.log(isbnCheck);
+    // console.log(test)
     if (isbnCheck) {
         validate(req.body, validRules, {}, (err, status) => {
             if (!status) {

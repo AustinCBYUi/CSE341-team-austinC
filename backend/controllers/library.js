@@ -100,6 +100,8 @@ const addBook = async (req, res) => {
             res.status(500).json(response.error || errorMsg);
         }
     } else {
+        //Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+        //Threw an error, @ addBook
         res.status(350).json('You do not possess the required permissions..');
     };
 };
